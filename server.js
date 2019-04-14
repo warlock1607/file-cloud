@@ -2,9 +2,11 @@ const express = require("express");
 
 const app = express();
 
-const { port } = require("./config");
+const { port, uploadFolder } = require("./config");
 
 const { getFilesList, downloadFile } = require("./app/controller");
+
+app.use('/static', express.static(uploadFolder));
 
 app.get("/", (req, res) => {
   res.send("hi");
