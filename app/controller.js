@@ -7,3 +7,8 @@ exports.getFilesList = (req, res) => {
     res.send(files);
   });
 };
+
+exports.downloadFile = (req, res) => {
+  const { filename } = req.params;
+  res.download(`${uploadFolder}/${filename}`);  
+}
