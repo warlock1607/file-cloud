@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/warlock1607/file-cloud#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "multer": "^1.4.1"
   }
 }

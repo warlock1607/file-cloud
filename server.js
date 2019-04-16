@@ -2,18 +2,10 @@ const express = require("express");
 
 const app = express();
 
-const { port, uploadFolder } = require("./config");
+const { port } = require("./config");
 
-const { getFilesList, downloadFile } = require("./app/controller");
+const router = require("./app/router");
 
-app.use('/static', express.static(uploadFolder));
-
-app.get("/", (req, res) => {
-  res.send("hi");
-});
-
-app.get("/api/files", getFilesList);
-
-app.get('/api/files/:filename', downloadFile);
+app.use('/', router);
 
 app.listen(port, () => console.log(`App started at port ${port}`));
