@@ -1,32 +1,27 @@
-const router = require('express').Router();
+// Express router providing file manipulations
 
-const { getFilesList, downloadFile, uploadFiles, removeFile } = require("./controller");
+const router = require("express").Router();
+
+const {
+  getFilesList,
+  downloadFile,
+  uploadFiles,
+  removeFile
+} = require("./controller");
 
 router.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-/**
- * Возвращает список файлов, если их нет, пустой массив
- */
+// responce description in app/controller.js
+
 router.get("/files", getFilesList);
 
-/**
- * 200 - файл найден, начинается загрузка
- * 404 - файл не найден
- */
-router.get('/files/:filename', downloadFile);
+router.get("/files/:filename", downloadFile);
 
-/**
- * 200 - файл найден, удалён
- * 404 - файл не найден
- */
-router.get('/remove/:filename', removeFile);
+router.get("/remove/:filename", removeFile);
 
-/**
- * При успешной загрузке возвращает 200
- */
-router.post('/upload', uploadFiles, (req, res) => {
+router.post("/upload", uploadFiles, (req, res) => {
   res.end();
 });
 
