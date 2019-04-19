@@ -21,7 +21,7 @@ router.get('/files/:filename', downloadFile);
  * 200 - файл найден, удалён
  * 404 - файл не найден
  */
-router.get('/remove/:filename', removeFile)
+router.get('/remove/:filename', removeFile);
 
 /**
  * При успешной загрузке возвращает 200

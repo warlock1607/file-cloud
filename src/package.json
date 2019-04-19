@@ -1,8 +1,7 @@
 {
   "name": "file-cloud",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "file cloud storage rest api",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/warlock1607/file-cloud.git"

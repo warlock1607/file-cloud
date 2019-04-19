@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  api:
+    build: .
+    command: node server.js
+    volumes:
+      - ./uploads:/usr/uploads
+    ports:
+      - "3000:3000"
