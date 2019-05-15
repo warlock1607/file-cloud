@@ -15,6 +15,9 @@
   "homepage": "https://github.com/warlock1607/file-cloud#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "multer": "^1.4.1"
+    "multer": "^1.4.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.1",
+    "keycloak-connect": "^6.0.1"
   }
 }
